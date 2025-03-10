@@ -8,7 +8,7 @@
       <div class="item-list rounded-4" style= "<%= "--position: #{index + 1}" %>" >
         <%= link_to user.lessons.first do %>
           <div class="card rounded-4" style="width: 18rem;">
-            <%# <%= cl_image_tag user.photo.key, width: 200, height: 200, crop: :fill, gravity: "face" %> %>
+            <%= cl_image_tag user.photo.key, width: 200, height: 200, crop: :fill, gravity: "face" %>
             <div class="card-body rounded-4">
               <h5 class="card-title text-black"><%= user.name %></h5>
               <p class="card-text text-black"><%= user.experience %></p>
