@@ -1,0 +1,36 @@
+<div class="hero-trainer">
+  <div class="card-trip bg-black">
+    <div class="bg-black">
+    </div>
+  </div>
+  <div>
+    <div class="text-center mt-4">
+      <h3><b>Explore popular trainer</b></h3>
+    </div>
+    <div class="">
+      <%# <%= render "slider", locals: {users: @users }  %>
+      <div class="container mt-4 text-center">
+        <%= link_to "Browse Lessons", lessons_path, class: "btn btn-dark" %>
+      </div>
+      <div class="text-center my-5">
+        <h4 class="fw-bold">Social Media</h4>
+        <p>We post new information about Hero Trainer on social media. Please follow us.</p>
+        <div class="d-flex justify-content-center">
+          <a href="https://www.facebook.com/" target="_blank">
+            <%= image_tag 'fb-logo.png', style: 'max-width: 30px; height: auto;', class: 'mx-2' %>
+          </a>
+          <a href="https://www.instagram.com/" target="_blank">
+            <%= image_tag 'ig-logo.png', style: 'max-width: 30px; height: auto;', class: 'mx-2'  %>
+          </a>
+          <a href="https://www.x.com/" target="_blank">
+            <%= image_tag 'x-logo.png', style: 'max-width: 30px; height: auto;', class: 'mx-2'  %>
+          </a>
+          <a href="https://www.youtube.com/" target="_blank">
+            <%= image_tag 'yt-logo.png', style: 'max-width: 30px; height: auto;', class: 'mx-2'  %>
+          </a>
+          <a href="https://www.line.me/en/" target="_blank">
+            <%= image_tag 'line-logo.png', style: 'max-width: 30px; height: auto;', class: 'mx-2'  %>
+          </a>
+        </div>
+      </div>
+    </div>
