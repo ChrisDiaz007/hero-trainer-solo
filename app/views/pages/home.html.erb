@@ -3,7 +3,11 @@
     <h1>Hero Trainer</h1>
     <p>Connecting users with elite training partners
       for personalized workouts and skill development</p>
-    <p><button><%= link_to "Get Started", new_user_session_path, class: "text-white" %></button></p>
+    <% if user_signed_in? %>
+      <p><button><%= link_to "Browse Trainers", lessons_path %></button></p>
+    <% else %>
+      <p><button><%= link_to "Get Started", new_user_session_path %></button></p>
+    <% end %>
   </div>
   <%= render "sliders" %>
   <%= javascript_include_tag "sliders" %>

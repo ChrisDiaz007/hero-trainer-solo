@@ -1,5 +1,5 @@
   <%= link_to 'Back', lessons_path, class: 'm-4 btn btn-secondary rounded-4 text-white' %>
-  <div class="container mt-1">
+<div class="container mt-1">
   <div class="row">
     <div class="col-8">
       <div class="card-product border">
@@ -36,18 +36,17 @@
       <div class="card-product-infos">
         <h1><%= @trainer.name %></h1>
         <% if @trainer.photo.attached? %>
-            <%= cl_image_tag @trainer.photo.key, gravity: "face", height: 300, width: 400, crop: :fill %>
+          <%= cl_image_tag @trainer.photo.key, gravity: "face", height: 300, width: 400, crop: :fill %>
         <% else %>
           <%= image_tag 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPQDYau3Hs4-xw1i8jVSUY4BlF4FLmg8lQqg&usqp=CAU' %>
         <% end %>
-        </div>
-
-        <!-- <div class="btn btn-trainer ">Trainer Profile</div> -->
-        <% unless current_user == @lesson.user %>
-          <%= link_to "Book Now!", new_lesson_booking_path(@lesson), class: "btn text-white mt-4", style: "height:50px; background-color: #2B4864" %>
-          <% end %>
-        </div>
-        <!-- <div class="col-4 border">
+      </div>
+      <!-- <div class="btn btn-trainer ">Trainer Profile</div> -->
+      <% unless current_user == @lesson.user %>
+        <%= link_to "Book Now!", new_lesson_booking_path(@lesson), class: "btn text-white mt-4", style: "height:50px; background-color: #2B4864" %>
+      <% end %>
+    </div>
+    <!-- <div class="col-4 border">
       <div><%= @trainer.name %></div>
     </div>
   </div>

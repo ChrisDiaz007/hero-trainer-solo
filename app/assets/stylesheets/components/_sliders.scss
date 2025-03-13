@@ -44,6 +44,9 @@ section {
   gap: 35px;
   transform: rotate(8deg);
   overflow: hidden;
+  margin-top: -43px;
+  margin-right: 55px;
+
 }
 
 .slider-container {
@@ -115,6 +118,7 @@ section {
 .content {
   color: rgb(207, 207, 207);
   padding-left: 80px;
+  margin: auto;
 }
 
 .content h1 {
@@ -145,7 +149,7 @@ section {
 }
 
 button {
-  background-color: #21ad67;
+  background-color: #f3f1fd;
   color: #fff;
   box-shadow: #21ad67 0 0 0 0;
   padding: 15px 30px;

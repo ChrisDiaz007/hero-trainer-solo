@@ -1,0 +1,33 @@
+<% @lessons.each do |lesson| %>
+  <%= link_to lesson_path(lesson) do %>
+    <div class="card-identity" style="background-image: url('<%= image_path 'card-logo.png' %>')">
+      <div class="card-identity-content">
+        <div class="card-identity-avatar">
+          <img src="card-log.png" alt="avatar" class="card-identity-img">
+          <h2><%= lesson.user.name %></h2>
+        </div>
+        <p><%= lesson.title.titleize %></p>
+      </div>
+    </div>
+  <% end %>
+<% end %>
+<% @lessons.each do |lesson| %>
+  <div class="card-product mx-3 mb-2">
+    <%= link_to lesson_path(lesson) do %>
+      <% if lesson.photos.attached? %>
+        <%= cl_image_tag lesson.photos.first.key, height: 300, width: 400, crop: :fill %>
+      <% else %>
+        <%= image_tag 'https://i.shgcdn.com/1e124b0b-7f01-435a-8812-ddb9c0bbe1bc/-/format/auto/-/preview/3000x3000/-/quality/lighter/' %>
+      <% end %>
+      <div class="card-product-infos">
+        <%= lesson.title.titleize %>
+        <br>
+        <%= lesson.category %>
+        <br>
+        <%= lesson.user.name.titleize if lesson.user.name %>
+        <br>
+        <%= lesson.duration.round(-1) %>
+      </div>
+    <% end %>
+  </div>
+<% end %>
