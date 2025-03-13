@@ -1,47 +1,40 @@
 <% @bookings.each do |booking| %>
   <div class="card-booking">
     <% if booking.lesson.photos.attached? %>
-
-              <%= cl_image_tag booking.lesson.photos.first.key, height: 120, width: 120, crop: :fill, class: "" %>
-            <% else %>
-              <%= image_tag 'https://hips.hearstapps.com/hmg-prod/images/mh-trainer-2-1533576998.png', class: 'w-100' %>
-            <% end %>
-
+      <%= cl_image_tag booking.lesson.photos.first.key, height: 120, width: 120, crop: :fill, class: "" %>
+    <% else %>
+      <%= image_tag 'https://hips.hearstapps.com/hmg-prod/images/mh-trainer-2-1533576998.png', class: 'w-100' %>
+    <% end %>
     <div class="card-booking-infos">
       <div class="d-flex justify-content-between">
         <h2>
           <%= booking.lesson.title.capitalize %>
         </h2>
-
         <% if booking.status == 'accepted' %>
           <span class="badge rounded-pill text-bg-success fw-medium">
             <%= booking.status %>
-            </span>
-          <% elsif booking.status == 'rejected' %>
-            <span class="badge rounded-pill text-bg-danger fw-medium"><%= booking.status %></span>
-          <% else %>
-            <span class="badge rounded-pill text-bg-secondary fw-medium"><%= booking.status %></span>
+          </span>
+        <% elsif booking.status == 'rejected' %>
+          <span class="badge rounded-pill text-bg-danger fw-medium"><%= booking.status %></span>
+        <% else %>
+          <span class="badge rounded-pill text-bg-secondary fw-medium"><%= booking.status %></span>
         <% end %>
       </div>
-
       <p><%= booking.lesson.category %></p>
-
       <p><%= booking.lesson.description %></p>
-
       <p>
         <i class="fa-solid fa-person"></i>
         <%= booking.lesson.capacity %>
       </p>
-        <p>
-          <i class="fa-solid fa-calendar"></i>
-          <%= booking.start_time.strftime("%d/%m - %R%p") %>
-        </p>
+      <p>
+        <i class="fa-solid fa-calendar"></i>
+        <%= booking.start_time.strftime("%d/%m - %R%p") %>
+      </p>
       <div class="d-flex justify-content-between">
         <p>
           <i class="fa-solid fa-clock"></i>
           <%= booking.lesson.duration %> minutes
         </p>
-
         <span class="fs-6">$<%= booking.lesson.price %></span>
       </div>
     </div>

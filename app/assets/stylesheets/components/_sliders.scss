@@ -39,13 +39,22 @@ section {
 
 // slider
 
+.slider-frame {
+  width: 60%;
+  height: 100vh;
+  padding: 0 72px;
+  overflow-y: hidden;
+}
+
 .sliders {
   display: flex;
   gap: 35px;
-  transform: rotate(8deg);
+  transform: rotate(8deg) translateY(-80px);
   overflow: hidden;
-  margin-top: -43px;
-  margin-right: 55px;
+  height: 120vh;
+  margin-left: 75px
+  // margin-top: -43px;
+  // margin-right: 55px;
 
 }
 
