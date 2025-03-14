@@ -2,8 +2,8 @@
 
 Hobby marketplace app built around booking classes with fitness role models.
 <img width="1512" alt="Screenshot 2025-03-14 at 2 38 40 PM" src="https://github.com/user-attachments/assets/0f48a4bd-44f2-4eef-a0c3-c2fa1fc8c116" />
-![ht browse](https://github.com/user-attachments/assets/42df8ff9-5797-48d9-9307-feeab112e889)
-![ht bookingpage](https://github.com/user-attachments/assets/99727eb0-14be-4061-8288-d88adcdd8d74)
+<img width="1512" alt="Screenshot 2025-03-14 at 3 07 45 PM" src="https://github.com/user-attachments/assets/b3c5a065-0506-4c96-aa54-3693ecaed97b" />
+<img width="1512" alt="Screenshot 2025-03-14 at 3 09 45 PM" src="https://github.com/user-attachments/assets/961900ee-c8f0-44b4-81de-071c4c1a6235" />
 
 <br>
 App home: https://hero-trainer-7fa0c2e5c903.herokuapp.com/
