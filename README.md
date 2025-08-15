@@ -1,5 +1,7 @@
 # 📚 Hero Trainer
 
+A training partner rental platform where users can book expert trainers. The platform integrates GPS functionality to help users locate nearby trainers and schedule in-person sessions. User authentication and session management were implemented to ensure secure and seamless booking experiences. PostgreSQL was utilized for efficient database management, with optimized queries to enable fast retrieval of trainer data.
+
 Hobby marketplace app built around booking classes with fitness role models.
 <img width="1512" alt="Screenshot 2025-03-14 at 2 38 40 PM" src="https://github.com/user-attachments/assets/0f48a4bd-44f2-4eef-a0c3-c2fa1fc8c116" />
 <img width="1512" alt="Screenshot 2025-03-14 at 3 07 45 PM" src="https://github.com/user-attachments/assets/b3c5a065-0506-4c96-aa54-3693ecaed97b" />
