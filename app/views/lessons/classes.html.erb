@@ -1,3 +1,15 @@
-<div>
-  <p>classes</p>
+<div >
+  Classes
+</div>
+<div style="background-image: url('<%= image_path 'wallpaper.png', crop: :fill%> ');">
+  <div class="container mt-3">
+    <div class="row mb-3">
+      <%= render 'search' %>
+    </div>
+    <div class="d-flex justify-content-center">
+      <div class="card-grid">
+        <%= render "card_classes" %>
+      </div>
+    </div>
+  </div>
 </div>

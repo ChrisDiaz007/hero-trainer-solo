@@ -6,20 +6,18 @@ Booking.destroy_all
 Lesson.destroy_all
 User.destroy_all
 
-CATEGORIES = ["Martial Arts", "Bodybuilding", "Sprinting", "Boxing", "Endurance", "Combat Training", "Tactical Combat", "Dance"]
-DURATION = [30, 60, 90]
-PRICE = [50, 75, 100, 150]
-CAPACITY = [4, 6 , 8, 10]
+CATEGORIES = ["Martial Arts", "Strength", "Endurance", "Combat Training", "Tactical Combat", "Dance"]
+DURATION = [30, 45, 60]
+PRICE = [50, 100, 150]
+CAPACITY = [4, 6, 10]
 
 CATEGORIESIMAGES = {
-  "Martial Arts" => "bruce-lee",
-  "Bodybuilding" => "arnold",
-  "Sprinting" => "sprinting",
-  "Boxing" => "boxing",
-  "Endurance" => "gokuss",
-  "Combat Training" => "chun-lee",
-  "Tactical Combat" => "martial",
-  "Dance" => "dancing"
+  "Martial Arts" => "1martial-arts",
+  "Strength" => "1strength",
+  "Endurance" => "1endurance",
+  "Combat Training" => "1combat-training",
+  "Tactical Combat" => "1tactical-combat",
+  "Dance" => "1dance"
 }
 puts "Creating trainers..."
 
@@ -75,7 +73,7 @@ trainers = [
     bio: "The Symbol of Peace, All Might teaches what it means to be a true hero—both physically and mentally.",
     experience: "Decades of hero work and strength-based combat training.",
     specialties: "Strength, Willpower, Heroic Mindset",
-    category: "Bodybuilding",
+    category: "Strength",
     address: "日本, 〒150-0036 東京都渋谷区南平台町１３番１０号",
     image: "https://i.pinimg.com/736x/e1/d0/ae/e1d0ae9e56018a2fda25b8bc90256092.jpg"
   },
@@ -157,28 +155,17 @@ trainers = [
     address: "日本, 〒150-0044 東京都渋谷区円山町２番９号",
     image: "https://static.zerochan.net/Oshi.no.Ko.1024.3944919.webp"
   },
-  {
-    name: "Lisa",
-    email: "lisa@hero.com",
-    password: "123123",
-    bio: "A world-famous K-pop idol and dancer, Lisa is known for her precision, fluidity, and stage presence in high-energy choreography.",
-    experience: "Over a decade of professional dance training and performances.",
-    specialties: "Hip-Hop Dance, Flexibility, Rhythm",
-    category: "Dance",
-    address: "日本, 〒150-0002 東京都渋谷区渋谷１丁目１０番３号",
-    image: 'https://upload.wikimedia.org/wikipedia/commons/4/49/Blackpink%27s_Lisa_Manoban_05.jpg'
-  },
-  {
-    name: "Martin",
-    email: "martin@hero.com",
-    password: "123123",
-    bio: "Martin is a social and outgoing person who loves the nightlife scene. He enjoys going to nightclubs, meeting new people, and having a great time with friends.",
-    experience: "Experienced in nightlife, socializing, partying, dating, and making new connections.",
-    specialties: "Nightlife Navigation, Social Charisma, Dating Expertise",
-    category: "Bodybuilding",
-    address: "日本, 〒150-0043 東京都渋谷区道玄坂１丁目２番",
-    image: "https://ca.slack-edge.com/T02NE0241-U08796W87GV-53fdd2ece44a-512"
-  }
+  # {
+  #   name: "Lisa",
+  #   email: "lisa@hero.com",
+  #   password: "123123",
+  #   bio: "A world-famous K-pop idol and dancer, Lisa is known for her precision, fluidity, and stage presence in high-energy choreography.",
+  #   experience: "Over a decade of professional dance training and performances.",
+  #   specialties: "Hip-Hop Dance, Flexibility, Rhythm",
+  #   category: "Dance",
+  #   address: "日本, 〒150-0002 東京都渋谷区渋谷１丁目１０番３号",
+  #   image: 'https://upload.wikimedia.org/wikipedia/commons/4/49/Blackpink%27s_Lisa_Manoban_05.jpg'
+  # }
 ]
 
 trainers.each_with_index do |trainer, index|

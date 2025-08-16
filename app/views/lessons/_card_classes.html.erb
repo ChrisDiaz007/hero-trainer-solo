@@ -1,0 +1,17 @@
+<% @classes.each do |userClass| %>
+  <div class="card-classes" style="background-image: url('<%= cl_image_path userClass.user.photo.key, width: 376, height: 460, crop: :fill, gravity: :face%>');" >
+    <div>
+      <p class="text-white fw-bold fs-5"><%= userClass.user.name %></p>
+    </div>
+    <div>
+      <p class="text-white"> <%= userClass.category %></p>
+    </div>
+    <div>
+      <%= link_to lesson_path(userClass), class: "text-decoration-none text-reset" do %>
+        <div>
+          <span class="card-classes-button"> View Class → </span>
+        </div>
+      <% end %>
+    </div>
+  </div>
+<% end %>
