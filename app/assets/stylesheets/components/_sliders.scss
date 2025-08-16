@@ -126,8 +126,8 @@ section {
 
 .content {
   color: rgb(207, 207, 207);
-  padding-left: 80px;
   margin: auto;
+  padding-left: 80px;
 }
 
 .content h1 {
@@ -136,6 +136,32 @@ section {
   font-size: clamp(2em, 5vw, 7rem);
   letter-spacing: 2px;
   margin-bottom: 30px;
+  background-color: #21ad67;
+  background-image: --webkit-linear-gradient(
+    to right,
+    #0075ba,
+    #21ad67,
+    #fae282
+  );
+  background-image: linear-gradient(to right, #6a76e2, #b4bdf9, #f3f1fd
+  );
+  // background-image: linear-gradient(to right, #0075ba, #21ad67, #fae282); blue green color
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.content-navbar {
+  color: rgb(207, 207, 207);
+  margin: auto;
+  padding-left: 20px;
+}
+
+.content-navbar h3 {
+  width: max-content;
+  font-family: "Protest Revolution", sans-serif;
+  font-size: 30px;
+  // letter-spacing: 2px;
+  // margin-bottom: 30px;
   background-color: #21ad67;
   background-image: --webkit-linear-gradient(
     to right,

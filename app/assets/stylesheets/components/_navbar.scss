@@ -2,7 +2,10 @@
   justify-content: space-between;
   background-color: #151d27;
   color: white;
-  height: 75px;
+  height: 90px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -13,9 +16,6 @@
   width: 40px;
 }
 
-// .nav-links {
-
-//   justify-content: space-between;
-
-//   width: 30%;
-// }
+.nav-link:hover {
+  color: red !important;
+}

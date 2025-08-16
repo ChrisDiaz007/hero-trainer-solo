@@ -9,9 +9,7 @@
     <%= javascript_importmap_tags %>
   </head>
   <body class="">
-    <% unless controller_name == "pages" %>
-      <%= render "shared/navbar" %>
-    <% end %>
+    <%= render "shared/navbar" %>
     <%= yield %>
     <%= render "shared/flashes" %>
   </body>
