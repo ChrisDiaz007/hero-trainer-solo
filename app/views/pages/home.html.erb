@@ -1,12 +1,12 @@
-<div class="vh-100">
+<div class="home-page-initial-container">
   <div class="d-flex justify-content-between">
-  <div class="content">
-    <h1>Hero Trainer</h1>
-    <p>Connecting users with elite training partners
-      for personalized workouts and skill development</p>
-    <% if user_signed_in? %>
-      <p><button><%= link_to "Browse Trainers", lessons_path %></button></p>
-    <% else %>
+    <div class="content">
+      <h1>Hero Trainer</h1>
+      <p>Connecting users with elite training partners
+        for personalized workouts and skill development</p>
+      <% if user_signed_in? %>
+        <p><button><%= link_to "Browse Trainers", lessons_path %></button></p>
+      <% else %>
         <button><%= link_to "Browser Trainer", lessons_path %> </button>
         <button><%= link_to "Get Started", new_user_session_path %></button>
       <% end %>
@@ -15,7 +15,54 @@
     <%= javascript_include_tag "sliders" %>
   </div>
 </div>
-
-<div class="vh-100 bg-white">
-  <p>Test</p>
+<div class="home-body-container bg-white d-flex justify-content-center">
+  <div class="d-flex flex-column" style="width: 1150px;">
+    <div class="d-flex gap-5">
+      <div class="home-card">
+        <p><i class="fa-regular fa-clock fa-2xl" style="color: #ff0000;"></i></p>
+        <h2>PROGRESSION</h2>
+        <p>Out team of experts will train with you to create a customized plan that helps you achieve success one step at a time.</p>
+      </div>
+      <div class="home-card">
+        <p><i class="fa-solid fa-dumbbell fa-2xl" style="color: #ff0000;"></i></p>
+        <h2>WORKOUT</h2>
+        <p>With a variety of trainers to choose from, you'll have everything uou need to get into the best shape of your life.</p>
+      </div>
+      <div class="home-card">
+        <p><i class="fa-brands fa-nutritionix fa-2xl" style="color: #ff0000;"></i></p>
+        <h2>NUTRITION</h2>
+        <p>Our team will work with you to crete a personalized meal plan that helps you reach your specific health goals.</p>
+      </div>
+    </div>
+    <div>
+      <div>
+        <div>
+          <h1>Who are we</h1>
+        </div>
+        <div>
+          <p class="fs-3 fw-bold">Take Your Health and Body to the Next Level</p>
+        </div>
+        <div>
+          <p>Take your health and body to the next level with our comprehensive program designed to help you reach your fitness goals.</p>
+        </div>
+        <div class="d-flex">
+          <div>
+            <p>IMAGE</p>
+            <p>PROFESSIONAL TRAINERS</p>
+          </div>
+          <div>
+            <p>IMAGE</p>
+            <p>MODERN EQUIPMENTS</p>
+          </div>
+          <div>
+            <p>IMAGE</p>
+            <p>FANCY GYM MACHINES</p>
+          </div>
+        </div>
+        <div>
+          <p>Button take a tour</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

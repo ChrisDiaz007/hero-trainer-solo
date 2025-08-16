@@ -1,8 +1,41 @@
+.home-page-initial-container {
+  height: 103vh;
+}
+
 .hero-banner {
   height: 600px; /* Adjust height as needed */
   // background: asset-url('home-page.png') no-repeat center center;
   background-size: cover;
-
   background-size: cover;
   background-blend-mode: overlay;
+}
+
+.home-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0 15px 15px -10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  top: -28px;
+  background-color: white;
+  padding: 50px;
+  gap: 5px;
+}
+.home-card:hover {
+  color: white;
+  background-color: black;
+}
+
+.home-body-container h1 {
+  width: max-content;
+  font-family: "Protest Revolution", sans-serif;
+  font-size: 30px;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  background-image: linear-gradient(to right, #f21b1b, #f21b1b, #f21b1b
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
