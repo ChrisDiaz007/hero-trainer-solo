@@ -1,0 +1,80 @@
+/* From Uiverse.io by Praashoo7 */
+.card-about-trainer
+ {
+  width: 400px;
+  height: 600px;
+  background: #171717;
+  transition: 1s ease-in-out;
+  clip-path: polygon(30px 0%, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0% 30px);
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-about-trainer
+ span {
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  display: block;
+  font-size: 1.6em;
+}
+
+.card-about-trainer
+ .info {
+  font-weight: 400;
+  color: white;
+  display: block;
+  text-align: center;
+  font-size: 0.9em;
+  margin: 1em;
+}
+
+.card-about-trainer
+ .img {
+  width: 8em;
+  height: 8em;
+  background: white;
+  border-radius: 15px;
+  margin: auto;
+}
+
+.card-about-trainer
+ .share {
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+.card-about-trainer
+ a {
+  color: white;
+  transition: .4s ease-in-out;
+}
+
+.card-about-trainer
+ a:hover {
+  color: red;
+}
+
+.card-about-trainer
+ button {
+  padding: 0.8em 1.7em;
+  display: block;
+  margin: auto;
+  border-radius: 25px;
+  border: none;
+  font-weight: bold;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  transition: .4s ease-in-out;
+}
+
+.card-about-trainer
+ button:hover {
+  background: red;
+  color: white;
+  cursor: pointer;
+}

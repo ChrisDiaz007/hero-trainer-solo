@@ -2,11 +2,25 @@
   position: sticky;
   overflow: hidden;
   top: 8px;
-  height: calc(100vh - 16px);
+  height: calc(40vh - 16px);
   border: 1px solid #2B4864;
   border-radius: 10px;
 }
 
 .map-view {
   height: 100%;
+}
+
+.map-trainer-container {
+  position: sticky;
+  overflow: hidden;
+  top: 8px;
+  height: calc(45vh - 16px);
+  border: 1px solid #2B4864;
+  border-radius: 10px;
+}
+
+.map-trainer-view {
+  height: 100%;
+  width: 100%;
 }

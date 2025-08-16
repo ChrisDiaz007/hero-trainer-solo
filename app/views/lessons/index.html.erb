@@ -12,12 +12,14 @@
       </div>
     </div>
   </div>
-  <div class="col-4">
-    <div class="map-container">
-      <div class="map-view"
+  <div class="d-flex justify-content-center">
+    <div class="col-7 pb-5 pt-2">
+      <div class="map-container">
+        <div class="map-view"
         data-controller="map"
         data-map-markers-value="<%= @markers.to_json %>"
         data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+        </div>
       </div>
     </div>
   </div>

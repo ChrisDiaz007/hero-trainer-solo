@@ -17,6 +17,17 @@ class LessonsController < ApplicationController
   def show
     @lesson = Lesson.find(params[:id])
     @trainer = @lesson.user
+
+  @markers =
+    if @lesson.geocoded?
+      [{
+        lat: @lesson.latitude,
+        lng: @lesson.longitude
+      }]
+    else
+      []
+    end
+
   end
 
   def classes
