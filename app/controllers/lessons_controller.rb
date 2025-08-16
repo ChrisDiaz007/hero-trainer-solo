@@ -4,7 +4,6 @@ class LessonsController < ApplicationController
   def index
     @lessons = Lesson.all
     if params[:query].present?
-      # talvez mudar para search_by_title apenas
       @lessons = Lesson.search_by_title_and_category(params[:query])
     end
     @markers = @lessons.geocoded.map do |lesson|
@@ -18,6 +17,10 @@ class LessonsController < ApplicationController
   def show
     @lesson = Lesson.find(params[:id])
     @trainer = @lesson.user
+  end
+
+  def classes
+    @classes = Lesson.all
   end
 
   def new
