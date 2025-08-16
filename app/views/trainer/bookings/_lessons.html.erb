@@ -1,29 +1,23 @@
-
-  <div class="card-booking">
-    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-    <div class="card-booking-infos">
-      <div class="d-flex justify-content-between">
-        <h2>
-          <%= lesson.title.capitalize %>
-        </h2>
-      </div>
-
-      <p><%= lesson.category %></p>
-
-      <p><%= lesson.description %></p>
-
+<div class="card-booking">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+  <div class="card-booking-infos">
+    <div class="d-flex justify-content-between">
+      <h2>
+        <%= lesson.title.capitalize %>
+      </h2>
+    </div>
+    <p><%= lesson.category %></p>
+    <p><%= lesson.description %></p>
+    <p>
+      <i class="fa-solid fa-person"></i>
+      <%= lesson.capacity %>
+    </p>
+    <div class="d-flex justify-content-between">
       <p>
-        <i class="fa-solid fa-person"></i>
-        <%= lesson.capacity %>
+        <i class="fa-solid fa-clock"></i>
+        <%= lesson.duration %> minutes
       </p>
-
-      <div class="d-flex justify-content-between">
-        <p>
-          <i class="fa-solid fa-clock"></i>
-          <%= lesson.duration %> minutes
-        </p>
-
-        <span class="fs-6">$<%= lesson.price %></span>
-      </div>
+      <span class="fs-6">$<%= lesson.price %></span>
     </div>
   </div>
+</div>

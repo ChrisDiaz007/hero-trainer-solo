@@ -6,7 +6,7 @@
       <div class="border rounded-4 p-4" style="background-color: #DDD; height:100%">
         <div class="align-items-center">
           <% if current_user.photo.attached? %>
-            <%= cl_image_tag current_user.photo.key, height: 120, width: 120, crop: :fill, class: 'rounded-circle mb-4' %>
+            <%= cl_image_tag current_user.photo.key, height: 600, width: 600, crop: :fill, class: 'rounded-circle mb-4' %>
           <% else %>
             <%= image_tag 'https://static.vecteezy.com/system/resources/thumbnails/005/129/844/small_2x/profile-user-icon-isolated-on-white-background-eps10-free-vector.jpg', class: ' rounded-circle mb-4 w-100' %>
           <% end %>

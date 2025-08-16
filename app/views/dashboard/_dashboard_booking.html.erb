@@ -1,7 +1,7 @@
 <% @bookings.each do |booking| %>
   <div class="card-booking">
     <% if booking.lesson.photos.attached? %>
-      <%= cl_image_tag booking.lesson.photos.first.key, height: 120, width: 120, crop: :fill, class: "" %>
+      <%= cl_image_tag booking.lesson.user.photo.key, gravity: "face", height: 300, width: 400, crop: :fill  %>
     <% else %>
       <%= image_tag 'https://hips.hearstapps.com/hmg-prod/images/mh-trainer-2-1533576998.png', class: 'w-100' %>
     <% end %>
@@ -17,7 +17,7 @@
         <% elsif booking.status == 'rejected' %>
           <span class="badge rounded-pill text-bg-danger fw-medium"><%= booking.status %></span>
         <% else %>
-          <span class="badge rounded-pill text-bg-secondary fw-medium"><%= booking.status %></span>
+          <span class="badge rounded-pill text-bg-warning fw-medium"><%= booking.status %></span>
         <% end %>
       </div>
       <p><%= booking.lesson.category %></p>

@@ -2,7 +2,7 @@
   <% lesson.bookings.each do |booking| %>
     <div class="container">
       <div class="notification">
-        <img src='' class="avatar-large" />
+        <%= cl_image_tag booking.user.photo.key, height: 400, width: 400, crop: :fill, class: 'booking-icon' %>
         <div class="notification-content">
           <p><%= booking.user.name %> </p>
           <p>
@@ -11,17 +11,17 @@
           </p>
         </div>
         <div class="d-flex">
-        <% if booking.pending? %>
-          <%= simple_form_for booking do |f| %>
-            <%= f.input :status, as: :hidden, input_html: { value: 'accepted'} %>
-            <%= f.submit 'Accept', class: 'btn btn-info' %>
-          <% end %>
-          <%= simple_form_for booking do |f| %>
-            <%= f.input :status, as: :hidden, input_html: { value: 'rejected'} %>
-            <%= f.submit 'Reject', class: 'btn btn-light' %>
-          <% end %>
-        <% else  %>
-        <p class='booking-tag'><%= booking.status.capitalize %></p>
+          <% if booking.pending? %>
+            <%= simple_form_for booking do |f| %>
+              <%= f.input :status, as: :hidden, input_html: { value: 'accepted'} %>
+              <%= f.submit 'Accept', class: 'btn btn-info' %>
+            <% end %>
+            <%= simple_form_for booking do |f| %>
+              <%= f.input :status, as: :hidden, input_html: { value: 'rejected'} %>
+              <%= f.submit 'Reject', class: 'btn btn-light' %>
+            <% end %>
+          <% else  %>
+            <p class='booking-tag rounded-pill text-bg-success p-1'><%= booking.status.capitalize %></p>
           <% end  %>
         </div>
       </div>

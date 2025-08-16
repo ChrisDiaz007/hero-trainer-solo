@@ -81,3 +81,4 @@ end
 # Custom
 gem 'faker'
 gem "geocoder"
+gem "ostruct"
