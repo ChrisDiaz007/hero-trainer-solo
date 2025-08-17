@@ -154,18 +154,7 @@ trainers = [
     category: "Dance",
     address: "日本, 〒150-0044 東京都渋谷区円山町２番９号",
     image: "https://static.zerochan.net/Oshi.no.Ko.1024.3944919.webp"
-  },
-  # {
-  #   name: "Lisa",
-  #   email: "lisa@hero.com",
-  #   password: "123123",
-  #   bio: "A world-famous K-pop idol and dancer, Lisa is known for her precision, fluidity, and stage presence in high-energy choreography.",
-  #   experience: "Over a decade of professional dance training and performances.",
-  #   specialties: "Hip-Hop Dance, Flexibility, Rhythm",
-  #   category: "Dance",
-  #   address: "日本, 〒150-0002 東京都渋谷区渋谷１丁目１０番３号",
-  #   image: 'https://upload.wikimedia.org/wikipedia/commons/4/49/Blackpink%27s_Lisa_Manoban_05.jpg'
-  # }
+  }
 ]
 
 trainers.each_with_index do |trainer, index|
