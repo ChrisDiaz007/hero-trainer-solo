@@ -1,4 +1,4 @@
-<div class="container mt-3">
+<div class="container mt-3" >
   <%= link_to "+ Create a New Lesson", new_lesson_path, class: "btn btn-primary rounded-pill mt-2" %>
   <div class="d-flex justify-content-around my-5">
     <div class="col-lg-4">
@@ -29,18 +29,17 @@
     </div>
     <div class="col-lg-8">
       <div class="overflow-scroll" style="height: 100%">
+        <h2 class=" ms-3">Lessons Created:</h2>
         <% @lessons.each do |lesson| %>
           <div>
-            <h2 class="text-white ms-3">Lessons Created:</h2>
             <%= link_to lesson_path(lesson), class: "w-100" do %>
               <%= render partial: 'lessons', locals: {lesson: lesson } %>
             <% end %>
-            <h2 class="text-white ms-3">Students Accepted</h2>
+            <h2 class=" ms-3">Students Accepted</h2>
             <%= render partial: "lesson_bookings", locals: {lesson: lesson } %>
           </div>
         <% end %>
       </div>
     </div>
   </div>
-</div>
 </div>

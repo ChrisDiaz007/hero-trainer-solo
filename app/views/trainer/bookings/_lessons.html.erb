@@ -1,5 +1,5 @@
-<div class="card-booking">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+<div class="card-booking ps-4 py-4">
+  <%= cl_image_tag current_user.photo.key, height: 400, width: 400, crop: :fill %>
   <div class="card-booking-infos">
     <div class="d-flex justify-content-between">
       <h2>

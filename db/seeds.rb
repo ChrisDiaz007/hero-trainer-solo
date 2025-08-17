@@ -153,7 +153,7 @@ trainers = [
     specialties: "Charisma, Performance Training, Mental Strength",
     category: "Dance",
     address: "日本, 〒150-0044 東京都渋谷区円山町２番９号",
-    image: "trainer12.png"
+    image: "https://static.zerochan.net/Oshi.no.Ko.1024.3944919.webp"
   }
 ]
 

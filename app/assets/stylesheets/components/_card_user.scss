@@ -1,0 +1,71 @@
+.card-user {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 376px;
+  height: 460px;
+  margin: 27px ;
+  border-radius: 20px;
+  gap: 16px;
+  padding: 40px;
+}
+
+.card-user p {
+  // color: white;
+  // font-size: 40px;
+  font-weight: bold;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.8); /* black blur around */
+}
+
+
+
+/* From Uiverse.io by vinodjangid07 */
+.card-user-button {
+  width: 130px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  color: black;
+  font-weight: 600;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.103);
+  position: relative;
+  overflow: hidden;
+  transition-duration: .3s;
+}
+
+.svgIcon {
+  width: 16px;
+}
+
+.svgIcon path {
+  fill: rgb(255, 255, 255);
+}
+
+.card-user-button::before {
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  content: "";
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  left: -100%;
+  top: 0;
+  transition-duration: .3s;
+  mix-blend-mode: difference;
+}
+
+.card-user-button:hover::before {
+  transition-duration: .3s;
+  transform: translate(100%,-50%);
+  border-radius: 0;
+}
+
+.card-user-button:active {
+  transform: translate(5px,5px);
+  transition-duration: .3s;
+}
