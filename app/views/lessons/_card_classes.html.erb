@@ -1,17 +1,15 @@
-<% @classes.each do |userClass| %>
-  <div class="card-classes" style="background-image: url('<%= cl_image_path userClass.user.photo.key, width: 376, height: 460, crop: :fill, gravity: :face%>');" >
+<% @lessons.each do |lesson| %>
+  <div class="card-classes" style="background-image: url('<%= cl_image_path lesson.user.photo.key, width: 376, height: 460, crop: :fill, gravity: :face%>');" >
     <div>
-      <p class="text-white fw-bold fs-5"><%= userClass.user.name %></p>
+      <p class="text-white fw-bold fs-5"><%= lesson.category %></p>
     </div>
     <div>
-      <p class="text-white"> <%= userClass.category %></p>
+      <p class="text-white fw-bold fs-5"><%= lesson.user.name %></p>
     </div>
-    <div>
-      <%= link_to lesson_path(userClass), class: "text-decoration-none text-reset" do %>
-        <div>
-          <span class="card-classes-button"> View Class → </span>
-        </div>
-      <% end %>
-    </div>
+    <%= link_to lesson_path(lesson), class: "text-decoration-none text-reset" do %>
+      <div>
+        <span class="card-classes-button"> View Class → </span>
+      </div>
+    <% end %>
   </div>
 <% end %>

@@ -19,6 +19,22 @@ CATEGORIESIMAGES = {
   "Tactical Combat" => "1tactical-combat",
   "Dance" => "1dance"
 }
+
+TRAINERSIMAGES = {
+  "Goku" => "igoku.png",
+  "Vegeta" => "ivegeta.png",
+  "Luffy" => "iluffy.png",
+  "Baki" => "ibaki.png",
+  "All Might" => "iallmight.png",
+  "Mikey" => "imikey.png",
+  "Naruto" => "inaruto.png",
+  "Rengoku" => "irengoku.png",
+  "Saitama" => "isaitama.png",
+  "Levi Ackerman" => "ilevi.png",
+  "Zoro" => "izoro.png",
+  "Ai" => "iai.png"
+}
+
 puts "Creating trainers..."
 
 trainers = [
@@ -31,7 +47,6 @@ trainers = [
     specialties: "Endurance, Strength, Combat",
     category: "Endurance",
     address: "日本, 〒150-0002 東京都渋谷区渋谷２丁目１９番１２号",
-    image: "https://static1.srcdn.com/wordpress/wp-content/uploads/2018/05/goku-mastered-ultra-instinct-6s.jpg"
   },
   {
     name: "Vegeta",
@@ -42,7 +57,6 @@ trainers = [
     specialties: "Power, Combat Strategy, Mental Toughness",
     category: "Martial Arts",
     address: "日本, 〒150-0043 東京都渋谷区道玄坂２丁目１０番１２号",
-    image: "https://c4.wallpaperflare.com/wallpaper/179/968/44/dragon-ball-super-dragon-ball-vegeta-super-saiyajin-blue-wallpaper-preview.jpg"
   },
   {
     name: "Luffy",
@@ -53,7 +67,6 @@ trainers = [
     specialties: "Agility, Stamina, Unconventional Fighting",
     category: "Endurance",
     address: "日本, 〒150-0043 東京都渋谷区道玄坂１丁目１６番１３号",
-    image: "https://images4.alphacoders.com/135/1352902.jpeg"
   },
   {
     name: "Baki",
@@ -64,7 +77,6 @@ trainers = [
     specialties: "Grappling, Striking, Combat Durability",
     category: "Combat Training",
     address: "日本, 〒150-0031 東京都渋谷区桜丘町９番１２号",
-    image: "https://cdn-images.dzcdn.net/images/cover/6768854919cfa55d221df590873579bc/0x1900-000000-80-0-0.jpg"
   },
   {
     name: "All Might",
@@ -75,7 +87,6 @@ trainers = [
     specialties: "Strength, Willpower, Heroic Mindset",
     category: "Strength",
     address: "日本, 〒150-0036 東京都渋谷区南平台町１３番１０号",
-    image: "https://i.pinimg.com/736x/e1/d0/ae/e1d0ae9e56018a2fda25b8bc90256092.jpg"
   },
   {
     name: "Mikey",
@@ -86,7 +97,6 @@ trainers = [
     specialties: "Kick Techniques, Speed, Combat Awareness",
     category: "Martial Arts",
     address: "日本, 〒150-0002 東京都渋谷区渋谷１丁目２３番２１号",
-    image: "https://i.pinimg.com/736x/4e/d4/54/4ed4549ef232a8ba92ef89eae04d5777.jpg"
   },
   {
     name: "Naruto",
@@ -97,7 +107,6 @@ trainers = [
     specialties: "Endurance, Chakra Control, Shadow Clone Training",
     category: "Martial Arts",
     address: "日本, 〒150-0036 東京都渋谷区南平台町１３番４号",
-    image: "https://c4.wallpaperflare.com/wallpaper/580/180/49/anime-naruto-naruto-uzumaki-ninja-wallpaper-preview.jpg"
   },
   {
     name: "Rengoku",
@@ -108,8 +117,6 @@ trainers = [
     specialties: "Swordsmanship, Stamina, Flame Breathing Techniques",
     category: "Combat Training",
     address: "日本, 〒150-0043 東京都渋谷区道玄坂２丁目２９番５号",
-    image: "https://w0.peakpx.com/wallpaper/554/825/HD-wallpaper-rengoku-demon-slayer.jpg"
-
   },
   {
     name: "Saitama",
@@ -120,7 +127,6 @@ trainers = [
     specialties: "Power, Speed, Stamina",
     category: "Endurance",
     address: "日本, 〒150-0043 東京都渋谷区道玄坂２丁目２０番９号",
-    image: "https://i.pinimg.com/736x/35/fb/66/35fb669fd3d93d70cea64b8a8f15e6e7.jpg"
   },
   {
     name: "Levi Ackerman",
@@ -131,7 +137,6 @@ trainers = [
     specialties: "Agility, Tactical Combat, Precision Strikes",
     category: "Tactical Combat",
     address: "日本, 〒150-0002 東京都渋谷区渋谷３丁目８番１２号",
-    image: "https://www.chromethemer.com/download/hd-wallpapers/levi-ackerman-3840x2160.jpg"
   },
   {
     name: "Zoro",
@@ -142,7 +147,6 @@ trainers = [
     specialties: "Swordsmanship, Strength, Endurance",
     category: "Combat Training",
     address: "日本, 〒150-0043 東京都渋谷区道玄坂２丁目１６番７号",
-    image: "https://4kwallpapers.com/images/walls/thumbs_3t/19795.jpg"
   },
   {
     name: "Ai",
@@ -153,7 +157,6 @@ trainers = [
     specialties: "Charisma, Performance Training, Mental Strength",
     category: "Dance",
     address: "日本, 〒150-0044 東京都渋谷区円山町２番９号",
-    image: "https://static.zerochan.net/Oshi.no.Ko.1024.3944919.webp"
   }
 ]
 
@@ -167,10 +170,11 @@ trainers.each_with_index do |trainer, index|
     specialties: trainer[:specialties]
   )
 
-  file = URI.parse(trainer[:image]).open
+  file_path = Rails.root.join("app/assets/images/#{TRAINERSIMAGES[trainer[:name]]}")
+  file = File.open(file_path, "rb")
+  user.photo.attach(io: file, filename: TRAINERSIMAGES[trainer[:name]], content_type: "image/png")
+  user.save!
 
-  user.photo.attach(io: file, filename: "#{trainer[:name]}.png", content_type: "image/png")
-  user.save
 
   lesson = Lesson.new(
     user: user,
