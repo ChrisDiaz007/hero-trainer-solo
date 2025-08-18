@@ -1,44 +1,46 @@
-<div class="container mt-3" >
-  <%= link_to "+ Create a New Lesson", new_lesson_path, class: "btn btn-primary rounded-pill mt-2" %>
-  <div class="d-flex justify-content-around my-5">
-    <div class="col-lg-4">
-      <div class="border rounded-4 p-4" style="background-color: #DDD; height:100%">
-        <div class="align-items-center">
-          <% if current_user.photo.attached? %>
-            <%= cl_image_tag current_user.photo.key, height: 400, width: 400, crop: :fill, class: 'rounded-circle mb-4' %>
-          <% else %>
-            <%= image_tag 'https://static.vecteezy.com/system/resources/thumbnails/005/129/844/small_2x/profile-user-icon-isolated-on-white-background-eps10-free-vector.jpg', class: ' rounded-circle mb-4 w-100' %>
-          <% end %>
-          <%= link_to "Edit profile", edit_user_registration_path, class: 'btn btn-secondary' %>
-          <h2 class="mb-2"><%= current_user.name %></h2>
-          <p><%= current_user.email %></p>
-        </div>
-        <div>
-          <h5>Bio:</h5>
-          <p class="ps-2"><%= current_user.bio %></p>
-        </div >
-        <div>
-          <h5>Experience:</h5>
-          <p class="ps-2 list-group-item"><%= current_user.experience %></p>
-        </div>
-        <div>
-          <h5>Specialties:</h5>
-          <p class="ps-2"><%= current_user.specialties %></p>
+<div class="py-4" style="background-image: url('<%= image_path "wallpaper.png", crop: :fill %> ');">
+  <div class="container mt-3" >
+    <%= link_to "+ Create a New Lesson", new_lesson_path, class: "btn btn-primary rounded-pill mt-2" %>
+    <div class="d-flex justify-content-around my-5">
+      <div class="col-lg-4">
+        <div class="border rounded-4 p-4" style="background-color: #DDD; height:100%">
+          <div class="align-items-center">
+            <% if current_user.photo.attached? %>
+              <%= cl_image_tag current_user.photo.key, height: 400, width: 400, crop: :fill, class: 'rounded-circle mb-4' %>
+            <% else %>
+              <%= image_tag 'https://static.vecteezy.com/system/resources/thumbnails/005/129/844/small_2x/profile-user-icon-isolated-on-white-background-eps10-free-vector.jpg', class: ' rounded-circle mb-4 w-100' %>
+            <% end %>
+            <%= link_to "Edit profile", edit_user_registration_path, class: 'btn btn-secondary' %>
+            <h2 class="mb-2"><%= current_user.name %></h2>
+            <p><%= current_user.email %></p>
+          </div>
+          <div>
+            <h5>Bio:</h5>
+            <p class="ps-2"><%= current_user.bio %></p>
+          </div >
+          <div>
+            <h5>Experience:</h5>
+            <p class="ps-2 list-group-item"><%= current_user.experience %></p>
+          </div>
+          <div>
+            <h5>Specialties:</h5>
+            <p class="ps-2"><%= current_user.specialties %></p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col-lg-8">
-      <div class="overflow-scroll" style="height: 100%">
-        <h2 class=" ms-3">Lessons Created:</h2>
-        <% @lessons.each do |lesson| %>
-          <div>
-            <%= link_to lesson_path(lesson), class: "w-100" do %>
-              <%= render partial: 'lessons', locals: {lesson: lesson } %>
-            <% end %>
-            <h2 class=" ms-3">Students Accepted</h2>
-            <%= render partial: "lesson_bookings", locals: {lesson: lesson } %>
-          </div>
-        <% end %>
+      <div class="col-lg-8">
+        <div class="overflow-scroll" style="height: 100%">
+          <h2 class=" ms-3">Lessons Created:</h2>
+          <% @lessons.each do |lesson| %>
+            <div>
+              <%= link_to lesson_path(lesson), class: "w-100" do %>
+                <%= render partial: 'lessons', locals: {lesson: lesson } %>
+              <% end %>
+              <h2 class=" ms-3">Students Accepted</h2>
+              <%= render partial: "lesson_bookings", locals: {lesson: lesson } %>
+            </div>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>

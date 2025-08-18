@@ -1,7 +1,7 @@
 <% @lessons.each do |lesson| %>
   <%= link_to lesson_path(lesson) do%>
     <div class="card-lesson">
-      <div class="top-section" style="background-image: url('<%= cl_image_path lesson.photos.first.key, width: 400, height: 400, crop: :fill %>');">
+      <div class="top-section" style="background-image: url('<%= cl_image_path lesson.photos.first.key, width: 220, height: 150, crop: :fill %>');">
         <div class="border">
         </div>
         <div class="icons">

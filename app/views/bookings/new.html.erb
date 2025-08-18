@@ -11,14 +11,11 @@
     <h6><em><%= @lesson.address %></em></h6>
   </div>
 </div>-->
-
 <%= link_to 'Back', lesson_path(@lesson), class: 'ms-5 mt-2 btn btn-secondary rounded-4 text-white' %>
-
 <div class="booking-form text-white">
   <div class="form-header">
     <h2 class>Make a booking</h2>
   </div>
-
   <form>
     <h3><%= @lesson.title.capitalize %></h3>
     <p><%= @lesson.description %></p>
@@ -26,6 +23,5 @@
     <p>Duration: <%= @lesson.duration %> minutes</p>
     <h6>Price: <b><%= @lesson.price %>$</b></h6>
   </form>
-
   <%= render 'bookings/form' %>
 </div>

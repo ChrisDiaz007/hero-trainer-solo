@@ -1,36 +1,38 @@
-<div class="d-grid justify-content-end">
-</div>
-<div class="container">
-  <div class="d-flex justify-content-around my-5">
-    <div class="col-lg-4">
-      <div class="border rounded-4 p-4" style="background-color: #DDD; height:100%">
-        <div class="align-items-center">
-          <% if current_user.photo.attached? %>
-            <%= cl_image_tag current_user.photo.key, height: 600, width: 600, crop: :fill, class: 'rounded-circle mb-4' %>
-          <% else %>
-            <%= image_tag 'https://static.vecteezy.com/system/resources/thumbnails/005/129/844/small_2x/profile-user-icon-isolated-on-white-background-eps10-free-vector.jpg', class: ' rounded-circle mb-4 w-100' %>
-          <% end %>
-          <%= link_to "Edit profile", edit_user_registration_path, class: 'btn btn-secondary' %>
-          <h2 class="mb-2"><%= current_user.name %></h2>
-          <p><%= current_user.email %></p>
-        </div>
-        <div>
-          <h5>Bio:</h5>
-          <p class="ps-2"><%= current_user.bio %></p>
-        </div >
-        <div>
-          <h5>Experience:</h5>
-          <p class="ps-2 list-group-item"><%= current_user.experience %></p>
-        </div>
-        <div>
-          <h5>Specialties:</h5>
-          <p class="ps-2"><%= current_user.specialties %></p>
+<div style="background-image: url('<%= image_path "wallpaper.png", crop: :fill %> ');">
+  <div class="d-grid justify-content-end">
+  </div>
+  <div class="container">
+    <div class="d-flex justify-content-around my-5">
+      <div class="col-lg-4">
+        <div class="border rounded-4 p-4" style="background-color: #DDD; height:100%">
+          <div class="align-items-center">
+            <% if current_user.photo.attached? %>
+              <%= cl_image_tag current_user.photo.key, height: 600, width: 600, crop: :fill, class: 'rounded-circle mb-4' %>
+            <% else %>
+              <%= image_tag 'https://static.vecteezy.com/system/resources/thumbnails/005/129/844/small_2x/profile-user-icon-isolated-on-white-background-eps10-free-vector.jpg', class: ' rounded-circle mb-4 w-100' %>
+            <% end %>
+            <%= link_to "Edit profile", edit_user_registration_path, class: 'btn btn-secondary' %>
+            <h2 class="mb-2"><%= current_user.name %></h2>
+            <p><%= current_user.email %></p>
+          </div>
+          <div>
+            <h5>Bio:</h5>
+            <p class="ps-2"><%= current_user.bio %></p>
+          </div >
+          <div>
+            <h5>Experience:</h5>
+            <p class="ps-2 list-group-item"><%= current_user.experience %></p>
+          </div>
+          <div>
+            <h5>Specialties:</h5>
+            <p class="ps-2"><%= current_user.specialties %></p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col-lg-8">
-      <div class="overflow-scroll" style="height: 500px">
-        <%= render "dashboard_booking" %>
+      <div class="col-lg-8">
+        <div class="overflow-scroll" style="height: 500px">
+          <%= render "dashboard_booking" %>
+        </div>
       </div>
     </div>
   </div>
