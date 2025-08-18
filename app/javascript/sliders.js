@@ -1,21 +1,12 @@
-function duplicateSlidesOnce(sliderId) {
-  const track = document.querySelector(`#${sliderId} .slider-track`);
-  if (!track) return;                         // page without this slider
-  if (track.dataset.duplicated === "true") return; // don't duplicate again (Turbo back/forward)
-
-  const slides = Array.from(track.children);
+function duplicateSlides(sliderId) {
+  const sliderTrack = document.querySelector(`#${sliderId} .slider-track`);
+  const slides = Array.from(sliderTrack.children);
   slides.forEach((slide) => {
-    track.appendChild(slide.cloneNode(true));
+    const clone = slide.cloneNode(true);
+    sliderTrack.appendChild(clone);
   });
-
-  track.dataset.duplicated = "true";
 }
 
-function initSliders() {
-  ["slider1", "slider2", "slider3"].forEach(duplicateSlidesOnce);
-}
-
-// First load + Turbo page changes
-document.addEventListener("turbo:load", initSliders);
-// Fallback for non-Turbo setups
-document.addEventListener("DOMContentLoaded", initSliders);
+duplicateSlides("slider1");
+duplicateSlides("slider2");
+duplicateSlides("slider3");
