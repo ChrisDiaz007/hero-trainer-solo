@@ -129,7 +129,7 @@ trainers = [
     address: "日本, 〒150-0043 東京都渋谷区道玄坂２丁目２０番９号",
   },
   {
-    name: "Levi Ackerman",
+    name: "Levi",
     email: "levi@hero.com",
     password: "123123",
     bio: "The strongest soldier in humanity, Levi's combat skills, precision, and discipline make him a master of battlefield tactics.",

@@ -5,9 +5,9 @@
       <p>Connecting users with elite training partners
         for personalized workouts and skill development</p>
       <% if user_signed_in? %>
-        <p><button><%= link_to "Browse Trainers", lessons_path %></button></p>
+        <p><button><%= link_to "Browse Trainers", users_path %></button></p>
       <% else %>
-        <button><%= link_to "Browser Trainer", lessons_path %> </button>
+        <button><%= link_to "Browser Trainer", users_path %> </button>
         <button><%= link_to "Get Started", new_user_session_path %></button>
       <% end %>
     </div>

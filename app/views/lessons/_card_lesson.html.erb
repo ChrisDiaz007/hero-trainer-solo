@@ -1,0 +1,33 @@
+<% @lessons.each do |lesson| %>
+  <%= link_to lesson_path(lesson) do%>
+    <div class="card-lesson">
+      <div class="top-section" style="background-image: url('<%= cl_image_path lesson.photos.first.key, width: 400, height: 400, crop: :fill %>');">
+        <div class="border">
+        </div>
+        <div class="icons">
+          <div class="logo">
+          </div>
+          <div class="social-media">
+          </div>
+        </div>
+      </div>
+      <div class="bottom-section">
+        <span class="title"><%= lesson.user.name %> class</span>
+        <div class="row row1">
+          <div class="item">
+            <span class="big-text">Prefecture</span>
+            <span class="regular-text">Shibuya</span>
+          </div>
+          <div class="item">
+            <span class="big-text">Cost</span>
+            <span class="regular-text">$<%= lesson.price %></span>
+          </div>
+          <div class="item">
+            <span class="big-text">Capacity</span>
+            <span class="regular-text"><%= lesson.capacity %></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+<% end %>
