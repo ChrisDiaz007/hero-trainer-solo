@@ -46,7 +46,13 @@ class LessonsController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
+  end
 
+  def destroy
+    @lesson = Lesson.find(params[:id])
+    @lesson.photos.each(&:purge_later) if @lesson.respond_to?(:photos)
+    @lesson.destroy
+    redirect_to lessons_path, notice: "Lesson deleted.", status: :see_other
   end
 
   private

@@ -11,7 +11,7 @@
     <%= f.input :price %>
     <%= f.input :capacity %>
     <%= f.input :category, collection: Lesson::CATEGORIES, prompt: "Select a category" %>
-    <%= f.input :photo, as: :file %>
+    <%= f.input :photos, as: :file, input_html: { name: "lesson[photos][]" } %>
     <%= f.submit 'Submit', class: 'btn btn-success mt-2' %>
   <% end %>
 </div>

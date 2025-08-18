@@ -20,54 +20,35 @@
     </div>
     <div>
       <div>
-        <p> <%= @user.name %> Classes: </p>
-      </div>
-      <div class="">
-        <% @user.lessons.each do |lesson| %>
-          <div class="card-user-classes d-flex  gap-5 bg-white border rounded-5 p-2">
-            <div class="d-flex align-items-center col-1">
-              <%= lesson.category %> class
-            </div>
-            <div class="d-flex align-items-center col-2">
-              Duration: <%= lesson.duration %> minutes
-            </div>
-            <div class="d-flex align-items-center col-1">
-              Price: $<%= lesson.price %>
-            </div>
-            <div class="d-flex align-items-center col-4">
-              Address: <%= lesson.address %>
-            </div>
-            <div>
-              <button><%= link_to 'More Info', lesson_path(lesson) %></button>
-            </div>
-          </div>
-        <% end %>
+        <p> <%= @user.name %> Open Classes: </p>
       </div>
       <div class="card-grid">
         <% @user.lessons.each do |lesson| %>
-          <div class="card-user">
-            <div>
-              <p class="text-white fw-bold fs-5"><%= lesson.category %></p>
-            </div>
-            <%= link_to lesson_path(lesson), class: "text-decoration-none text-reset" do %>
+          <% if lesson.photos.attached? %>
+            <div class="card-user"
+           style="background-image: url('<%= cl_image_path lesson.photos.first.key, width: 376, height: 460, crop: :fill, gravity: :face %>');">
               <div>
-                <span class="card-user-button"> More Info → </span>
+                <p class="text-white fw-bold fs-5"><%= lesson.category %> class</p>
               </div>
-            <% end %>
-          </div>
+              <div>
+                <p class="text-white">Duration: <%= lesson.duration %>min / $<%= lesson.price %> </p>
+              </div>
+              <div>
+                <p class="text-white">Address: <%= lesson.address %></p>
+              </div>
+              <%= link_to lesson_path(lesson), class: "text-decoration-none text-reset" do %>
+                <div>
+                  <span class="card-user-button"> More Info → </span>
+                </div>
+              <% end %>
+            </div>
+          <% else %>
+            <div class="card-user no-photo">
+              <p>No photo uploaded</p>
+            </div>
+          <% end %>
         <% end %>
       </div>
     </div>
   </div>
-</div>
-<div>
-  <% @user.lessons.each do |lesson| %>
-    <% if lesson.photos.attached? %>
-      <% lesson.photos.each do |photo| %>
-        <%= image_tag url_for(photo) %>
-      <% end %>
-    <% else %>
-      <p>No photos uploaded</p>
-    <% end %>
-  <% end %>
 </div>

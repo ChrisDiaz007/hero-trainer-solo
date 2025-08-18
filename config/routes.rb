@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get "up" => "rails/health#show", as: :rails_health_check
 
-  resources :lessons, only: [:index, :show, :new, :create] do
+  resources :lessons do
     collection do
       get :classes
     end

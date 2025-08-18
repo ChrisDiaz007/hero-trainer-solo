@@ -1,8 +1,16 @@
 class User < ApplicationRecord
+  include PgSearch::Model
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
+
+  pg_search_scope :search_by_name,
+                  against: [ :name ], # só :title
+                  using: { tsearch: { prefix: true } }
+
+
   has_many :bookings
   has_many :lessons
   has_many :reviews, through: :lessons
