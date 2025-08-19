@@ -82,3 +82,4 @@ end
 gem 'faker'
 gem "geocoder"
 gem "ostruct"
+gem "pundit"

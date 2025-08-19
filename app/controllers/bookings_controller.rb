@@ -1,8 +1,8 @@
 class BookingsController < ApplicationController
-
   def new
     @lesson = Lesson.find(params[:lesson_id])
     @booking = Booking.new
+    authorize @booking
   end
 
   def create
@@ -10,6 +10,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.lesson = @lesson
     @booking.user = current_user
+    authorize @booking
     if @booking.save
       redirect_to dashboard_path, notice: "Booking requested"
     else
@@ -19,6 +20,7 @@ class BookingsController < ApplicationController
 
   def update
     @booking = Booking.find(params[:id])
+    authorize @booking
     if @booking.update(booking_params)
       redirect_to trainer_bookings_path
     else

@@ -11,12 +11,12 @@ class User < ApplicationRecord
                   using: { tsearch: { prefix: true } }
 
 
-  has_many :bookings
-  has_many :lessons
+  has_many :lessons, dependent: :destroy
+  has_many :bookings, dependent: :destroy
   has_many :reviews, through: :lessons
   # validates :name, presence: true, uniqueness: true
   # validates :bio, presence: true, length: { minimum: 10, maximum: 360 }
   # validates :experience, length: { minimum: 10, maximum: 500 }
   # validates :specialties, length: { minimum: 10, maximum: 200 }
-  has_one_attached :photo
+  has_one_attached :photo, dependent: :purge_later
 end
