@@ -1,6 +1,7 @@
 # 📚 Hero Trainer
 
-A training partner rental platform where users can book expert trainers. The platform integrates GPS functionality to help users locate nearby trainers and schedule in-person sessions. User authentication and session management were implemented to ensure secure and seamless booking experiences. PostgreSQL was utilized for efficient database management, with optimized queries to enable fast retrieval of trainer data.
+In this project, I created a web app registration and management system for a Training partners. The system should allow users to create accounts and register for classes. They are able to find classes of different types taught by different people. Instructors should be able to create classes of a certain type then manage those classes by changing their time, type, adding teachers, and removing/adding clientele. Finally they are able to propose new class types. The owner is able to reject or approve different class types as well as alter classes the same as an instructor. The owner is also able to manage qualities of the gym such as class length capacity.
+
 
 Hobby marketplace app built around booking classes with fitness role models.
 <img width="1512" alt="Screenshot 2025-03-14 at 2 38 40 PM" src="https://github.com/user-attachments/assets/0f48a4bd-44f2-4eef-a0c3-c2fa1fc8c116" />
