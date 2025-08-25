@@ -58,6 +58,7 @@ ActiveRecord::Schema[7.1].define(version: 2025_02_20_022722) do
     t.string "title"
     t.string "description"
     t.integer "duration"
+    t.string "prefecture"
     t.integer "price"
     t.integer "capacity"
     t.bigint "user_id", null: false

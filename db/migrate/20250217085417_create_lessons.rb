@@ -4,7 +4,7 @@ class CreateLessons < ActiveRecord::Migration[7.1]
       t.string :title
       t.string :description
       t.integer :duration
-      t.string :location
+      t.string :prefecture
       t.integer :price
       t.integer :capacity
       t.references :user, foreign_key: true, null: false

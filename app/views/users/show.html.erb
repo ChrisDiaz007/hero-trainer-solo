@@ -3,7 +3,7 @@
     <div class="d-flex justify-content-center py-5">
       <div class="card-about-trainer pb-5">
         <div class="img"> <%= cl_image_tag @user.photo.key, gravity: "face", height: 400, width: 400, crop: :fill %> </div>
-        <span><%= @user.first_name %></span>
+        <span><%= @user.first_name %> <%= @user.last_name %></span>
         <p class="info"><%= @user.bio %></p>
         <p class="info"><%= @user.experience %></p>
         <p class="info">Specialties: <br>
