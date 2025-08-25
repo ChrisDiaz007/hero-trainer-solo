@@ -4,7 +4,7 @@
       <div class="notification">
         <%= cl_image_tag booking.user.photo.key, height: 400, width: 400, crop: :fill, class: 'booking-icon' %>
         <div class="notification-content">
-          <p><%= booking.user.name %> </p>
+          <p><%= booking.user.first_name %> </p>
           <p>
             <i class="fa-solid fa-person"></i>
             <%= booking.participants %>

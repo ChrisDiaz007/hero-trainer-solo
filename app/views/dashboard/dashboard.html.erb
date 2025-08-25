@@ -12,7 +12,7 @@
               <%= image_tag 'https://static.vecteezy.com/system/resources/thumbnails/005/129/844/small_2x/profile-user-icon-isolated-on-white-background-eps10-free-vector.jpg', class: ' rounded-circle mb-4 w-100' %>
             <% end %>
             <%= link_to "Edit profile", edit_user_registration_path, class: 'btn btn-secondary' %>
-            <h2 class="mb-2"><%= current_user.name %></h2>
+            <h2 class="mb-2"><%= current_user.first_name %></h2>
             <p><%= current_user.email %></p>
           </div>
           <div>

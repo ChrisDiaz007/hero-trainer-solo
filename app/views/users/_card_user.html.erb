@@ -1,7 +1,7 @@
 <% @users.each do |user| %>
   <div class="card-user" style="background-image: url('<%= cl_image_path user.photo.key, width: 376, height: 460, crop: :fill, gravity: :face %>');" >
     <div>
-      <p class="text-white fw-bold fs-5"><%= user.name %></p>
+      <p class="text-white fw-bold fs-5"><%= user.first_name %></p>
     </div>
     <%= link_to user_path(user), class: "text-decoration-none text-reset" do %>
       <div>

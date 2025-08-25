@@ -1,7 +1,7 @@
 <% @lessons.each do |lesson| %>
   <div class="card-trainer" style="background-image: url('<%= cl_image_path lesson.user.photo.key, width: 376, height: 460, crop: :fill, gravity: :face%>');" >
     <div>
-      <p class="text-white fw-bold fs-5"><%= lesson.user.name %></p>
+      <p class="text-white fw-bold fs-5"><%= lesson.user.first_name %></p>
     </div>
     <%= link_to lesson_path(lesson), class: "text-decoration-none text-reset" do %>
       <div>

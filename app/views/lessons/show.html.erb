@@ -21,7 +21,7 @@
         <% end %>
       </div>
       <span> <%= @lesson.title %></span>
-      <p class="info fs-5">Teacher: <%= @trainer.name %></p>
+      <p class="info fs-5">Teacher: <%= @trainer.first_name %></p>
       <p class="info"><%= @lesson.description %></p>
       <p class="info">Price: $<%= number_with_delimiter(@lesson.price) %></p>
       <p class="info">Duration: <%= @lesson.duration %> minutes</p>

@@ -4,7 +4,7 @@
       <div class="card-identity-content">
         <div class="card-identity-avatar">
           <%= cl_image_tag lesson.user.photo.key, gravity: "face", height: 300, width: 400, crop: :fill %>
-          <h2><%= lesson.user.name %></h2>
+          <h2><%= lesson.user.first_name %></h2>
         </div>
         <p><%= lesson.title.titleize %></p>
         <p class="card-identity-tags">Duration: <%= lesson.duration.round(-1) %> minutes</p>
